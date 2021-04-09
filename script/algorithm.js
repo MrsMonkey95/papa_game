@@ -5,7 +5,7 @@ function main(currentTime) {
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
     window.requestAnimationFrame(main);
     lastRenderTime = currentTime;
-    console.log(currentTime);
+    console.log(secondsSinceLastRender);
 }
 
 window.requestAnimationFrame(main);
