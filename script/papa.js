@@ -5,14 +5,17 @@
 
 import { getInputDirection } from "./input.js";
 
-export const PAPA_SPEED = 1;
+export const PAPA_SPEED = 5;
 const papaSnake = [
-    { x: 10, y: 11 }
+    { x: 11, y: 11 }
 ];
-
+let newSegments = 0;
 
 
 export function update() {
+
+    addSegments();
+
     const inputDirection = getInputDirection();
     for (let i = papaSnake.length - 2; i >= 0; i--) {
         papaSnake[i + 1] = { ...papaSnake[i] }
@@ -34,5 +37,28 @@ export function draw(gameSpace) {
         gameSpace.appendChild(papaElement);
         console.log('draw me a Papa');
     })
+
+}
+
+export function expandPapa(amount) {
+    newSegments += amount;
+}
+
+export function onPapa(position) {
+    return papaSnake.some(segment =>{
+        return equalPositions(segment, position);
+    } )
+}
+
+function equalPositions(pos1, pos2) {
+    return pos1.x === pos2.x && pos1.y === pos2.y ;
+}
+
+function addSegments(){
+    for (let i = 0; i < newSegments; i++) {
+        papaSnake.push( { ...papaSnake[papaSnake.length -1] });
+    }
+
+    newSegments = 0;
 
 }

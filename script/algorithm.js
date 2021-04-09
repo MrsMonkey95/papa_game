@@ -10,6 +10,8 @@ const gameSpace = document.getElementById('game-space');
 // Imports
 import { PAPA_SPEED, update as updatePapa, draw as drawPapa } from './papa.js';
 
+import { update as updateMoonies, draw as drawMoonies } from './moonies.js';
+
 
 // Game loop
 function main(currentTime) {
@@ -22,18 +24,19 @@ function main(currentTime) {
     console.log('Render');
     /* Game logic starting here */
 
-    update()
-
-    draw()
+    update();
+    draw();
 }
 
 window.requestAnimationFrame(main);
 
 function update() {
     updatePapa();
+    updateMoonies();
 }
 
 function draw() {
     gameSpace.innerHTML = '';
     drawPapa(gameSpace);
+    drawMoonies(gameSpace);
 }

@@ -40,7 +40,7 @@ body {
 
 /*  So the food will be moonies, what else? */
 
-.safemoon {
+.moonies {
     background-image: url("images/moonie.png");
     background-size: contain;
     border: none;
