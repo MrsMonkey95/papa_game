@@ -1,8 +1,9 @@
 /*  Stylesheet for The Real Papa Game 
+    a special edition of the snake game.
     created by MrsMonkey95 on 09.04.2021 */
 
-
-    #body {
+/*  Just a black background center aligned... */
+    body {
         height: 100vh;
         width: 100vw;
         display: flex;
@@ -11,7 +12,10 @@
         margin: 0;
         background-color: black;
         
+        
+        
     }
+   
 
     /*  Maintaining a square shaped game area through vmin 
         TO DO Change background image 
@@ -24,5 +28,20 @@
         grid-template-rows: repeat(21, 1fr);
         grid-template-columns: repeat(21, 1fr);
 
+
+    }
+
+    /*  Papa gonna eat that moonies! */
+
+    .papa {
+        background-image: url("images/papa_wizard.png");
+        border: none;
+
+    }
+
+    /*  So the food will be moonies, what else? */
+    .safemoon {
+        background-image: url("images/moonie.png");
+        border: none;
 
     }
