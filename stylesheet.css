@@ -1,6 +1,8 @@
-/*  Stylesheet for The Real Papa Game 
+/* 
+    Stylesheet for The Real Papa Game, 
     a special edition of the snake game.
-    created by MrsMonkey95 on 09.04.2021 */
+    created by MrsMonkey95 on 09.04.2021
+*/
 
 /*  Just a black background center aligned... */
     body {
@@ -17,7 +19,8 @@
     }
    
 
-    /*  Maintaining a square shaped game area through vmin 
+    /*  
+        Maintaining a square shaped game area through vmin 
         TO DO Change background image 
     */
     #game-space {
