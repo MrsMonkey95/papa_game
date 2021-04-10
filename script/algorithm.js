@@ -19,9 +19,16 @@ import { outsideGrid } from './grid.js';
 
 // Game loop
 function main(currentTime) {
-
+/*  TO DO: Change the dialog box from default confirm function to a customized box using colors and buttontext matching the game. 
+    i.e. with sweetalert / bootboxjs / jQuery UI dialog
+*/
     if (gameOver) {
-        return alert('you paperhanded');
+        if (confirm('You papaer-handed! Press "ok" to collect more moonies.')){
+            location.reload();
+        }
+        return;
+
+        //return alert('you paperhanded'); <- changed to restart game if wanted to play longer
     }
 
 
