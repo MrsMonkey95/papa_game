@@ -1,0 +1,11 @@
+Ideas to go with:
+
+1.      Display current score where the highscore starts at 1 and equals the amout of moonies eaten.
+
+2.      Create a highscore storage (probably in a txt file) so that one can try to beat the highscore.
+
+3.      Change the fckn gameover box....
+
+4.      Add special events: 
+        -   probably something like random lgbt+ moonies to collect and make a rainbow snake for x seconds
+        -   random e-cigarettes to collect that changes papa heads into vaping papa dragon heads
