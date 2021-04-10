@@ -23,6 +23,7 @@ body {
 
 #game-space {
     background-image: url("images/space.jpg");
+    background-size: cover;
     width: 100vmin;
     height: 100vmin;
     display: grid;
