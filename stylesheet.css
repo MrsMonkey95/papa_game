@@ -45,3 +45,9 @@ body {
     background-size: contain;
     border: none;
 }
+
+.lgbtmoonies{
+    background-image: url("images/rainbow.png");
+    background-size: contain;
+    border: none;
+}
