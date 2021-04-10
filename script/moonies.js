@@ -4,12 +4,14 @@
 */
 import { onPapa, expandPapa } from './papa.js';
 import { randomGridPosition} from './grid.js';
+import { playCoin } from './audio.js';
 
 let moonies = getRandomMooniesPosition();
 const EXPANSION_RATE = 1;
 
 export function update() {
     if (onPapa(moonies)) {
+        playCoin();
         expandPapa(EXPANSION_RATE);
         moonies = getRandomMooniesPosition();
 
