@@ -9,7 +9,7 @@ let gameOver = false;
 const gameSpace = document.getElementById('game-space');
 
 // Imports
-import { PAPA_SPEED, update as updatePapa, draw as drawPapa, getPapaHead,  papaIntersection} from './papa.js';
+import { PAPA_SPEED, update as updatePapa, draw as drawPapa, getPapaHead, papaIntersection } from './papa.js';
 
 import { update as updateMoonies, draw as drawMoonies } from './moonies.js';
 
@@ -18,14 +18,13 @@ import { outsideGrid } from './grid.js';
 
 
 // Game loop
-function main(currentTime) {
-/*  TO DO: Change the dialog box from default confirm function to a customized box using colors and buttontext matching the game. 
-    i.e. with sweetalert / bootboxjs / jQuery UI dialog
-*/
+function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took 3996ms  algorithm.js: 21 */
+    /*  TO DO: Change the dialog box from default confirm function to a customized box using colors and buttontext matching the game. 
+        i.e. with sweetalert / bootboxjs / jQuery UI dialog
+    */
     if (gameOver) {
-        
-        if (confirm('You papaer-handed! Press "ok" to collect more moonies.')){
-            location.reload();
+        if (confirm('You papaer-handed! Press "ok" to collect more moonies.')) {
+            location.reload(false);
         }
         window.location.replace("http://safemoon.net");
 
