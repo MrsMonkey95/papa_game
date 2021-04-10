@@ -24,9 +24,9 @@ function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took
     */
     if (gameOver) {
         if (confirm('You papaer-handed! Press "ok" to collect more moonies.')) {
-            location.reload(false);
+           return location.reload();
         }
-        window.location.replace("http://safemoon.net");
+        return window.location.replace("http://safemoon.net");
 
         //return alert('you paperhanded'); <- changed to restart game if wanted to play longer
     }
