@@ -23,10 +23,11 @@ function main(currentTime) {
     i.e. with sweetalert / bootboxjs / jQuery UI dialog
 */
     if (gameOver) {
+        
         if (confirm('You papaer-handed! Press "ok" to collect more moonies.')){
             location.reload();
         }
-        return;
+        window.location.replace("http://safemoon.net");
 
         //return alert('you paperhanded'); <- changed to restart game if wanted to play longer
     }
