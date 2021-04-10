@@ -25,7 +25,7 @@ function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took
         i.e. with sweetalert / bootboxjs / jQuery UI dialog
     */
     if (gameOver) {
-        document.getElementById('ragnarSong').play();
+        // document.getElementById('ragnarSong').play();
         if (confirm('You papaer-handed! Press "ok" to collect more moonies.')) {
            return location.reload();
         }
