@@ -15,6 +15,8 @@ import { update as updateMoonies, draw as drawMoonies } from './moonies.js';
 
 import { outsideGrid } from './grid.js';
 
+// import { playRagnarSong } from './audio.js';
+
 
 
 // Game loop
@@ -23,6 +25,7 @@ function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took
         i.e. with sweetalert / bootboxjs / jQuery UI dialog
     */
     if (gameOver) {
+        document.getElementById('ragnarSong').play();
         if (confirm('You papaer-handed! Press "ok" to collect more moonies.')) {
            return location.reload();
         }
@@ -31,7 +34,7 @@ function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took
         //return alert('you paperhanded'); <- changed to restart game if wanted to play longer
     }
 
-
+    
     window.requestAnimationFrame(main);
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
     // Checking render time, how often rendering per second
