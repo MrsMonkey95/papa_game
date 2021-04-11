@@ -14,7 +14,7 @@ var coin = new Audio('./audio/coin.mp3');
 } */
 
 // coin is working in edge but doesn't work in chrome...  -> fixed in chrome settings
-// TO DO: figure out how to fix this shit without turning off hardware acceleration in chrome manually
+// TO DO: figure out how to fix this shit without turning off hardware acceleration in chrome manually <- probably fixed, could have been a sound glitch on my pc
 export function playCoin(){
     coin.play();
 }

@@ -14,13 +14,16 @@ body {
     align-items: center;
     margin: 0;
     background-color: black;
+    text-align: left;
+
 }
+
+
 
 /*  
         Maintaining a square shaped game area through vmin 
         TO DO Change background image 
     */
-
 #game-space {
     background-image: url("images/space.jpg");
     background-size: cover;
@@ -43,12 +46,20 @@ body {
 
 .moonies {
     background-image: url("images/moonie.png");
-    background-size: contain;
+    background-size: cover;
     border: none;
 }
 
 .lgbtmoonies{
     background-image: url("images/rainbow.png");
-    background-size: contain;
+    background-size: cover;
     border: none;
+}
+
+.highscore{
+    background-color: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-style: normal;
+    color: #b30000;
 }
