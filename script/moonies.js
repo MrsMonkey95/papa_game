@@ -8,13 +8,15 @@ import { playCoin } from './audio.js';
 
 let moonies = getRandomMooniesPosition();
 const EXPANSION_RATE = 1;
+var count = 0;
 
 export function update() {
     if (onPapa(moonies)) {
         playCoin();
         expandPapa(EXPANSION_RATE);
         moonies = getRandomMooniesPosition();
-
+        count = count + 1;
+        
     }
 }
 
@@ -26,10 +28,12 @@ export function draw(gameSpace) {
     gameSpace.appendChild(mooniesElement);
 }
 
-function getRandomMooniesPosition() {
+export function getRandomMooniesPosition() {
     let newMooniesPosition;
     while (newMooniesPosition == null || onPapa(newMooniesPosition)) {
         newMooniesPosition = randomGridPosition();
     }
     return newMooniesPosition;
 }
+
+export {count};

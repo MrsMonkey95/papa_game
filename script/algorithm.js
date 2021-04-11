@@ -7,6 +7,7 @@ created by MrsMonkey95 on 09.04.2021
 let lastRenderTime = 0;
 let gameOver = false;
 const gameSpace = document.getElementById('game-space');
+const body = document.getElementById('body');
 
 // Imports
 import { PAPA_SPEED, update as updatePapa, draw as drawPapa, getPapaHead, papaIntersection } from './papa.js';
@@ -15,9 +16,9 @@ import { update as updateMoonies, draw as drawMoonies } from './moonies.js';
 
 import { outsideGrid } from './grid.js';
 
+import { draw as drawScore, update as updateScore } from './highscore.js';
+
 // import { playRagnarSong } from './audio.js';
-
-
 
 // Game loop
 function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took 3996ms  algorithm.js: 21 */
@@ -46,6 +47,7 @@ function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took
 
     update();
     draw();
+    
 }
 
 window.requestAnimationFrame(main);
@@ -54,14 +56,21 @@ function update() {
     updatePapa();
     updateMoonies();
     checkDeath();
+    updateScore();
 }
 
 function draw() {
+    
     gameSpace.innerHTML = '';
     drawPapa(gameSpace);
     drawMoonies(gameSpace);
+    drawScore(body);
+    
+
+
 }
 
 function checkDeath() {
     gameOver = outsideGrid(getPapaHead()) || papaIntersection();
 }
+
