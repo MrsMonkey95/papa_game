@@ -18,7 +18,7 @@ import { outsideGrid } from './grid.js';
 
 import { draw as drawScore, update as updateScore } from './highscore.js';
 
-import { update as updateDifficulty } from './settings.js';
+// import { difficulty as updateDifficulty } from './settings.js';
 
 // import { playRagnarSong } from './audio.js';
 
@@ -41,7 +41,7 @@ function main(currentTime) { /* [Violation] 'requestAnimationFrame' handler took
     window.requestAnimationFrame(main);
     const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
     // Checking render time, how often rendering per second
-    if (secondsSinceLastRender < 1 / PAPA_SPEED) return;
+    if (secondsSinceLastRender < 1 / parseInt(document.querySelector('input[name="difficulty"]:checked').value)) return;
 
     lastRenderTime = currentTime;
     console.log('Render');
@@ -59,7 +59,8 @@ function update() {
     updateMoonies();
     checkDeath();
     updateScore();
-    updateDifficulty();
+    // updateDifficulty();
+        
 }
 
 function draw() {
@@ -68,7 +69,7 @@ function draw() {
     drawPapa(gameSpace);
     drawMoonies(gameSpace);
     drawScore(highscore);
-    //drawDifficulty();
+    
     
 
 
@@ -77,4 +78,5 @@ function draw() {
 function checkDeath() {
     gameOver = outsideGrid(getPapaHead()) || papaIntersection();
 }
+
 

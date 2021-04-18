@@ -5,7 +5,7 @@
 
 import { getInputDirection } from "./input.js";
 
-export const PAPA_SPEED = 5;
+export var PAPA_SPEED = 5;
 const papaSnake = [
     { x: 11, y: 11 }
 ];
