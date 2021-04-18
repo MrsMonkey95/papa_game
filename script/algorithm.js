@@ -18,6 +18,8 @@ import { outsideGrid } from './grid.js';
 
 import { draw as drawScore, update as updateScore } from './highscore.js';
 
+import { update as updateDifficulty } from './settings.js';
+
 // import { playRagnarSong } from './audio.js';
 
 // Game loop
@@ -57,6 +59,7 @@ function update() {
     updateMoonies();
     checkDeath();
     updateScore();
+    updateDifficulty();
 }
 
 function draw() {
@@ -65,6 +68,7 @@ function draw() {
     drawPapa(gameSpace);
     drawMoonies(gameSpace);
     drawScore(highscore);
+    //drawDifficulty();
     
 
 
