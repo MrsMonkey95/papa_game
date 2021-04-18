@@ -11,7 +11,7 @@ import { count } from './moonies.js';
 
 
 
-var highscoreElement = document.createElement('highscore');
+var highscoreElement = document.getElementById('highscore');
 
 
 
@@ -26,9 +26,9 @@ export function update() {
 
 
 
-export function draw(body) {
+export function draw(highscore) {
         
     highscoreElement.innerHTML = 'Score: ' + count;
     highscoreElement.classList.add('highscore');
-    body.appendChild(highscoreElement);
+    //highscore.appendChild(highscoreElement);
 }

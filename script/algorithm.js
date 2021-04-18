@@ -64,7 +64,7 @@ function draw() {
     gameSpace.innerHTML = '';
     drawPapa(gameSpace);
     drawMoonies(gameSpace);
-    drawScore(body);
+    drawScore(highscore);
     
 
 
