@@ -26,7 +26,7 @@ export function update() {
 
 
 
-export function draw(highscore) {
+export function draw(highscoreElement) {
         
     highscoreElement.innerHTML = 'Score: ' + count;
     highscoreElement.classList.add('highscore');

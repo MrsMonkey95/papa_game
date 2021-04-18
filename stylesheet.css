@@ -9,49 +9,84 @@
 body {
     height: 100vh;
     width: 100vw;
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: black;
+    background-color:#18181a;
     text-align: left;
-
 }
 
-.flex-container{
+h3{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    font-style: normal;
+    color: #bffffd;
+}
+
+p{
+    text-align: left;
+}
+
+/* Flex container 1 */
+
+.master-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.topnav {
+    background-color: black;
+    height: 6vh;
+    overflow: visible;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5vh;
+    font-style: normal;
+    color: #00A79D;
+    text-align: center;
+}
+
+/* Flex container 2 */
+
+.flex-container {
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
-    background-color: black;
-    height: 100vh;
+    background-color: #18181a;
+    height: 94vh;
     width: 100vw;
     justify-content: center;
     align-content: center;
-    
     /*position: relative;*/
 }
 
+/* Flex container 3 */
 
+.itemBox {
+    display: flex;
+    width: 94vh;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
 
 /*  
-        Maintaining a square shaped game area through vmin 
+        Maintaining a square shaped game area through vw 
         TO DO Change background image 
     */
+
 .game-space {
     background-image: url("images/space.jpg");
     background-size: cover;
-    height: 50vw;
-    width: 50vw;
+    height: 94vh;
+    width: 94vh;
     display: grid;
     grid-template-rows: repeat(21, 1fr);
     grid-template-columns: repeat(21, 1fr);
-   
-    
     /*position: absolute;*/
 }
-
-
 
 /*  Papa gonna eat that moonies! */
 
@@ -69,37 +104,59 @@ body {
     border: none;
 }
 
-.lgbtmoonies{
+.lgbtmoonies {
     background-image: url("images/rainbow.png");
     background-size: cover;
     border: none;
 }
 
-.highscore{
-    background-color: black;
-    height: 100vmin;
-    width: 25%;
+.highscore {
+    background-color: #18181a;
+    height: 94vh;
+    width: 47vh;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-size: 4vh;
     font-style: normal;
-    color: #b30000;
+    color: #bffffd;
     justify-content: center;
+    text-align: center;
     /*flex-grow: 1;*/
 }
 
-.options{
-    width: 25%;
+/* Flex container 4 */
+
+.flex-options {
+    display: flex;
+    width: 47vh;
+    height: 94vh;
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
     font-style: normal;
-    color: #b30000;
-    align-items: flex-start;
+    color: #bffffd;
+    /*align-items: flex-start;*/
+    justify-content: space-between;
+    flex-direction: column;
     /*flex-grow:  1;*/
+}
+
+.opt1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-style: normal;
+    color: #bffffd;
     
 }
 
-.itemBox{
-    display: flex;
-    width: 50%;
-    align-items: center;
+.opt2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-style: normal;
+    color: #bffffd;
+}
+
+.opt3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-style: normal;
+    color: #bffffd;
 }
