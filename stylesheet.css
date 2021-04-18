@@ -143,7 +143,7 @@ p {
 
 .opt1 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-size: 2vh;
     font-style: normal;
     color: #bffffd;
     height: 46vh;
@@ -151,7 +151,7 @@ p {
 
 .opt2 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-size: 2vh;
     font-style: normal;
     color: #bffffd;
     height: 46vh;
