@@ -18,7 +18,7 @@ import { outsideGrid } from './grid.js';
 
 import { draw as drawScore, update as updateScore } from './highscore.js';
 
-// import { difficulty as updateDifficulty } from './settings.js';
+import { setFocusToGameSpace as updateFocus } from './settings.js';
 
 // import { playRagnarSong } from './audio.js';
 
@@ -59,7 +59,7 @@ function update() {
     updateMoonies();
     checkDeath();
     updateScore();
-    // updateDifficulty();
+    updateFocus();
         
 }
 

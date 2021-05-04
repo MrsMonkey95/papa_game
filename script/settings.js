@@ -12,8 +12,11 @@
 
 
 
-
-
+/*  Function to set focus back on the game space instead to the
+    radio group when selecting difficulty. */
+export function setFocusToGameSpace(){
+    document.getElementById('game-space').focus();
+}
 
 
 
