@@ -8,6 +8,8 @@
 /* 
     IMPORTANT NOTE: Radio buttons are still taking "keydown" inputs, so at the moment one must click on the page somewhere to use the arrow keys for the game,
                     otherwise the arrow keys will switch through the radio buttons and cause a terrible mess...
+
+    UPDATE: Solved by stebueh, thx.
 */
 
 
